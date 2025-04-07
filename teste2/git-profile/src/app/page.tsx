@@ -26,9 +26,7 @@ export default function Home() {
               </div>
               </div>
             </form>
-            <UserNotFound />
-
-            
+            <User/>
         </div>
       </main>
 
