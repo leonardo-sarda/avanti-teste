@@ -3,7 +3,7 @@ import { User } from "@/components/user";
 import { UserNotFound } from "@/components/user-not-found";
 import { Search, Target } from "lucide-react";
 import Image from "next/image";
-import { useActionState, useState } from "react";
+import {  useEffect, useState } from "react";
 import gitname from "../assets/gitname.svg";
 import logo from "../assets/logo.svg";
 
@@ -45,7 +45,7 @@ export default function Home() {
 						</button>
 					</div>
 				</form>
-				{userName && <User username={searchUser} />}
+				{searchUser && <User username={searchUser} />}
 			</div>
 		</main>
 	);
