@@ -1,43 +1,266 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="style.css">
-  <title>LP avanti</title>
+  <meta name="description" content="Avanti - Ganhe $10,00 de desconto no seu primeiro pedido com o cupom DESCONTO10">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Avanti - Promoções e Lançamentos</title>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Nunito Sans', 'sans-serif'],
+          },
+          colors: {
+            primary: '#005CFF',
+            secondary: '#6220C1',
+            lightGray: '#F5F5F5',
+            mediumGray: '#DEDEDE',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <main class="">
-    <section class="bg-[#005CFF] flex justify-center text-center">
-      <p class="font-bold text-[14px] text-white">
-        Ganhe
-        <span class="bg-[#6220C1] w-[63px]">$10,00</span>  de desconto no seu primeiro pedido.
-        Utilize o cupom <span class="font-serif">DESCONTO10</span>
-      </p>
-    </section>
-    <header class="container mx-auto " >
-      <div class="flex justify-between mt-4">
-        <div>
-          <img src="/assets/logo.png" alt="">
-        </div>
-        <div class=" w-[594px] h-10 flex justify-between items-center rounded-lg border border-gray-300">
-           <input class="w-[594px] ml-6 border-none font-semibold text-[14px] placeholder:text-black font-semibold text-[14px]" type="text" name="" id="" placeholder="Digite aqui o que você procura"> 
-          <button class="mx-3"><img src="/assets/search.png" alt=""></button>
-        </div>
-        <div class="flex gap-2 justify-center items-center ">
-          <img src="/assets/user.png" alt="" class="w-[20px] h-[24px] ">
-          <div class="flex flex-col items-start bg-red-400 text-[14px]">
-            <p >Óla</p>
-            <p>Nome Cliente</p>
-          </div>
-        </div>
-        <div>carrinho
+<body class="font-sans bg-white">
+  <!-- Promo Banner -->
+  <section class="bg-primary py-2 px-4 text-center">
+    <p class="font-bold text-sm text-white">
+      Ganhe <span class="bg-secondary px-2 py-0.5 rounded">$10,00</span> de desconto no seu primeiro pedido.
+      Utilize o cupom <span class="font-serif italic">DESCONTO10</span>
+    </p>
+  </section>
 
+  <!-- Header -->
+  <header class="container mx-auto px-4 py-4">
+    <div class="flex justify-between items-center">
+      <button aria-label="Menu" class="w-6 h-6">
+        <img src="/assets/chess.png" alt="Menu" class="w-full h-full">
+      </button>
+      <h1>
+        <img src="/assets/logo.png" alt="Avanti" class="h-6">
+      </h1>
+      <div class="relative">
+        <button aria-label="Carrinho" class="w-6 h-6">
+          <img src="./assets/car.png" alt="Carrinho" class="w-full h-full">
+        </button>
+        <span class="absolute -top-2 -right-2 bg-primary rounded-full w-5 h-5 flex items-center justify-center text-xs text-white">2</span>
+      </div>
+    </div>
+    
+    <div class="mt-4 relative">
+      <form role="search" class="flex items-center border rounded-lg overflow-hidden h-10">
+        <input class="w-full px-4 outline-none text-sm" 
+          type="search" 
+          name="search" 
+          id="search" 
+          placeholder="Digite aqui o que você procura"
+          aria-label="Pesquisar produtos">
+        <button type="submit" class="px-4" aria-label="Pesquisar">
+          <img src="./assets/search.png" alt="" class="w-5 h-5">
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <main class="container mx-auto">
+    <!-- Hero Banner -->
+    <section class="mt-4 px-4">
+      <img src="./assets/folder1.png" alt="Promoção especial" class="w-full rounded-lg">
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="mt-8 px-4">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="font-bold text-lg md:text-xl">Lançamentos</h2>
+        <a href="#" class="text-sm font-bold underline hover:text-primary transition">Ver mais</a>
+      </div>
+      
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <article class="product-card">
+          <img src="./assets/roupa.png" alt="Produto novo 1" class="w-full rounded-lg hover:opacity-90 transition">
+          <h3 class="mt-2 text-sm font-semibold">Nome do Produto</h3>
+          <p class="text-xs text-gray-600">R$ 99,90</p>
+        </article>
+        <article class="product-card">
+          <img src="./assets/roupa.png" alt="Produto novo 2" class="w-full rounded-lg hover:opacity-90 transition">
+          <h3 class="mt-2 text-sm font-semibold">Nome do Produto</h3>
+          <p class="text-xs text-gray-600">R$ 99,90</p>
+        </article>
+      </div> 
+      
+      <div class="my-4 flex justify-center items-center">
+        <span class="w-2 h-2 bg-gray-600 rounded-full mx-1"></span>
+        <span class="w-2 h-2 bg-gray-300 rounded-full mx-1"></span>
+        <span class="w-2 h-2 bg-gray-300 rounded-full mx-1"></span>
+      </div>
+    </section>
+
+    <!-- Content Section 1 -->
+    <section class="mt-8 md:mt-12">
+      <div class="w-full">
+        <img src="./assets/cup.png" alt="Conteúdo promocional" class="w-full">
+      </div>
+      <div class="px-6 mt-6 mb-8 md:mb-12 md:px-12">
+        <h3 class="font-bold text-2xl mb-4 md:text-3xl">Lorem IPSUM</h3>
+        <div class="text-sm leading-relaxed">
+          <p class="mb-4">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim</p>
+          <p>Cras dignissim est et pellentesque tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue placerat et.</p>
         </div>
       </div>
-    </header>
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-mediumGray py-8 md:py-12">
+      <div class="flex justify-center">
+        <img src="./assets/cup2.png" alt="Recursos" class="max-w-xs md:max-w-md">
+      </div>
+      <div class="text-center my-5">
+        <h3 class="font-bold text-xl md:text-2xl">LOREM IPSUM</h3>
+      </div>
+      <div class="px-6 md:px-12">
+        <div class="flex flex-col items-center my-6 md:flex-row md:items-start">
+          <img src="./assets/Circulo e Icone.svg" alt="Ícone" class="w-12 h-12 mb-3 md:mb-0 md:mr-4">
+          <p class="text-xs text-center md:text-left md:text-sm">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+        </div>
+        <div class="flex flex-col items-center my-6 md:flex-row md:items-start">
+          <img src="./assets/Circulo e Icone.svg" alt="Ícone" class="w-12 h-12 mb-3 md:mb-0 md:mr-4">
+          <p class="text-xs text-center md:text-left md:text-sm">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+        </div>
+        <div class="flex flex-col items-center my-6 md:flex-row md:items-start">
+          <img src="./assets/Circulo e Icone.svg" alt="Ícone" class="w-12 h-12 mb-3 md:mb-0 md:mr-4">
+          <p class="text-xs text-center md:text-left md:text-sm">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section 2 -->
+    <section class="mt-8 md:mt-12">
+      <div>
+        <img src="./assets/cup3.png" alt="Mais conteúdo" class="w-full">
+      </div>
+      <div class="px-6 mt-6 md:px-12">
+        <h3 class="font-bold text-2xl mb-4 md:text-3xl">LOREM IPSUM</h3>
+        <div class="text-sm leading-relaxed">
+          <p class="mb-4">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim</p>
+          <p>Cras dignissim est et pellentesque tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue placerat et.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Banner -->
+    <section class="relative my-8 md:my-12">
+      <img src="./assets/quarto-banner.png" alt="Entre em contato" class="w-full">
+      <div class="absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 py-3 px-4">
+        <p class="text-white text-center text-sm md:text-base font-semibold">Entre em contato conosco e verifique a disponibilidade para sua região!</p>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="px-4 md:px-0">
+      <h3 class="text-center text-lg font-bold md:text-xl">Cadastre-se na nossa newsletter</h3>
+      <div class="bg-lightGray rounded-xl mt-4 p-6 md:p-8">
+        <form class="w-full">
+          <div class="bg-white rounded-lg mb-4 h-12 flex items-center">
+            <input type="text" name="name" id="name" placeholder="Digite seu nome" 
+              class="w-full px-4 outline-none text-sm">
+          </div>
+          <div class="bg-white rounded-lg h-12 flex items-center">
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail" 
+              class="w-full px-4 outline-none text-sm">
+          </div>
+          <div class="flex items-center my-6">
+            <input type="checkbox" id="privacy" class="w-4 h-4 mr-3">
+            <label for="privacy" class="text-xs font-bold">Estou de acordo com a Política de Privacidade</label>
+          </div>
+          <button type="submit" class="w-full bg-primary rounded-lg h-12 text-white font-semibold hover:bg-opacity-90 transition">
+            Cadastrar
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-lightGray mt-10">
+      <div class="flex justify-center py-10">
+        <img src="./assets/avanti2.svg" alt="Avanti" class="h-8">
+      </div>
+      
+      <div class="flex justify-center pb-10">
+        <ul class="flex gap-8">
+          <li>
+            <a href="#" aria-label="Instagram">
+              <img src="./assets/instagram.svg" alt="Instagram" class="h-6">
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Facebook">
+              <img src="./assets/facebook.svg" alt="Facebook" class="h-6">
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="YouTube">
+              <img src="./assets/youtube-logo.svg" alt="YouTube" class="h-6">
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="TikTok">
+              <img src="./assets/logo-tiktok-svgrepo-com.svg" alt="TikTok" class="h-6">
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="border-t border-gray-300">
+        <div class="py-4 px-4 flex justify-between items-center">
+          <h5 class="font-semibold">Institucional</h5>
+          <img src="./assets/iconmonstr-arrow-25.svg" alt="" class="w-4 transform transition-transform duration-300">
+        </div>
+        <div class="border-t border-gray-300 py-4 px-4 flex justify-between items-center">
+          <h5 class="font-semibold">Central de ajuda</h5>
+          <img src="./assets/iconmonstr-arrow-25.svg" alt="" class="w-4 transform transition-transform duration-300">
+        </div>
+        <div class="border-t border-b border-gray-300 py-4 px-4 flex justify-between items-center">
+          <h5 class="font-semibold">Atendimento</h5>
+          <img src="./assets/iconmonstr-arrow-25.svg" alt="" class="w-4 transform transition-transform duration-300">
+        </div>
+      </div>
+      
+      <div class="py-8">
+        <div class="flex justify-center gap-6 flex-wrap px-4">
+          <img src="./assets/pagamentos/amex.svg" alt="American Express" class="h-6">
+          <img src="./assets/pagamentos/União 32.svg" alt="Mastercard" class="h-6">
+          <img src="./assets/pagamentos/visa.svg" alt="Visa" class="h-6">
+          <img src="./assets/pagamentos/Caminho 19362.svg" alt="Hipercard" class="h-6">
+          <img src="./assets/pagamentos/elo.svg" alt="Elo" class="h-6">
+        </div>
+        <div class="flex justify-center gap-6 flex-wrap mt-4 px-4">
+          <img src="./assets/pagamentos/b.svg" alt="Boleto" class="h-6">
+          <img src="./assets/pagamentos/paypal-seeklogo.com.svg" alt="PayPal" class="h-6">
+          <img src="./assets/pagamentos/União 332.svg" alt="Pix" class="h-6">
+          <img src="./assets/pagamentos/icon-boleto___ffe2ba684569d29f8e546b10457c48f8.svg" alt="Outro" class="h-6">
+        </div>
+      </div>
+      
+      <div class="px-4 py-6 text-center">
+        <p class="text-xs text-gray-600">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.
+        </p>
+      </div>
+      
+      <div class="flex justify-center pb-8">
+        <div class="flex flex-wrap items-center justify-center gap-4 md:gap-8">
+          <img src="./assets/footer/Group.svg" alt="Certificado" class="h-8">
+          <img src="./assets/footer/vtex-pci-200.svg" alt="PCI" class="h-8">
+          <span class="hidden md:block text-gray-400">|</span>
+          <img src="./assets/footer/Frame 14.svg" alt="Segurança" class="h-8">
+          <img src="./assets/footer/VTEX_Logo (1) 1.svg" alt="VTEX" class="h-8">
+        </div>
+      </div>
+    </footer>
   </main>
-            
 </body>
 </html>
