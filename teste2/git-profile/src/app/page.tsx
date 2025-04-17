@@ -45,7 +45,8 @@ export default function Home() {
 						</button>
 					</div>
 				</form>
-				{searchUser && <User username={searchUser} />}
+				
+				{searchUser ? <User username={searchUser} /> : <UserNotFound/>}
 			</div>
 		</main>
 	);

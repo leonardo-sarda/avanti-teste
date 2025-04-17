@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import leo from "../assets/leo.jpeg";
 import user from "../assets/user.png";
-import { UserNotFound } from "./user-not-found";
 
 type UserProps = {
 	username: string;
@@ -13,31 +12,12 @@ export function User({ username }: UserProps) {
 	const [userData, setUserData] = useState({
 		name: "",
 		bio: "",
-		avatar_url: null,
+		avatar_url: "",
 	});
 
-	const [notFound, setNotFound] = useState(false);
+	
 
-	useEffect(() => {
-		
-			const verifyUser = async () => {
-				setNotFound(false);
-				try{
-					const result = await getUserGit(username)
-					if(!result){
-						setNotFound(true)
-					}else{
-						setUserData(result)
-					}
-				}catch{
-					setNotFound(true)
-				}
-			}
-
-			verifyUser();
-	}, [username]);
-
-	if(notFound) return <UserNotFound />
+	console.log(userData.avatar_url);
 
 	return (
 		<div className="bg-withe-200 rounded-[25px] w-[804px] h-[257px]">

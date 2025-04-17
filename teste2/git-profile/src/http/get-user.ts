@@ -2,6 +2,7 @@ type UserResponse = {
 	name: string;
 	bio: string;
 	avatar_url: string | null;
+	status: number;
 };
 
 export async function getUserGit(username: string): Promise<UserResponse> {
@@ -11,5 +12,6 @@ export async function getUserGit(username: string): Promise<UserResponse> {
 		name: data.name,
 		bio: data.bio,
 		avatar_url: data.avatar_url,
+		status: data.status
 	};
 }
