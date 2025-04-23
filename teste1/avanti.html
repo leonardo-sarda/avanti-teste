@@ -1,266 +1,492 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Avanti - Ganhe $10,00 de desconto no seu primeiro pedido com o cupom DESCONTO10">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Avanti - Promoções e Lançamentos</title>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Nunito Sans', 'sans-serif'],
-          },
-          colors: {
-            primary: '#005CFF',
-            secondary: '#6220C1',
-            lightGray: '#F5F5F5',
-            mediumGray: '#DEDEDE',
-          }
-        }
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>LP avanti</title>
 </head>
-<body class="font-sans bg-white">
-  <!-- Promo Banner -->
-  <section class="bg-primary py-2 px-4 text-center">
-    <p class="font-bold text-sm text-white">
-      Ganhe <span class="bg-secondary px-2 py-0.5 rounded">$10,00</span> de desconto no seu primeiro pedido.
-      Utilize o cupom <span class="font-serif italic">DESCONTO10</span>
-    </p>
-  </section>
-
-  <!-- Header -->
-  <header class="container mx-auto px-4 py-4">
-    <div class="flex justify-between items-center">
-      <button aria-label="Menu" class="w-6 h-6">
-        <img src="/assets/chess.png" alt="Menu" class="w-full h-full">
-      </button>
-      <h1>
-        <img src="/assets/logo.png" alt="Avanti" class="h-6">
-      </h1>
-      <div class="relative">
-        <button aria-label="Carrinho" class="w-6 h-6">
-          <img src="./assets/car.png" alt="Carrinho" class="w-full h-full">
-        </button>
-        <span class="absolute -top-2 -right-2 bg-primary rounded-full w-5 h-5 flex items-center justify-center text-xs text-white">2</span>
-      </div>
-    </div>
+<body class="font-[Nunito Sans]">
+  <main class="w-screen h-screen">
+      <!-- Faixa do cupom (mobile + desktop) -->
+      <section class="bg-[#005CFF] flex justify-center text-center px-2 py-1">
+        <p class="font-bold text-[14px] text-white">
+          Ganhe <span class="bg-[#6220C1] px-1">$10,00</span> de desconto no seu primeiro pedido.
+          Utilize o cupom <span class="font-serif">DESCONTO10</span>
+        </p>
+      </section>
     
-    <div class="mt-4 relative">
-      <form role="search" class="flex items-center border rounded-lg overflow-hidden h-10">
-        <input class="w-full px-4 outline-none text-sm" 
-          type="search" 
-          name="search" 
-          id="search" 
-          placeholder="Digite aqui o que você procura"
-          aria-label="Pesquisar produtos">
-        <button type="submit" class="px-4" aria-label="Pesquisar">
-          <img src="./assets/search.png" alt="" class="w-5 h-5">
-        </button>
-      </form>
+      <header class="flex flex-col container mx-auto">
+        <!-- Linha principal do mobile -->
+        <div class="flex justify-between mx-4 my-6 md:hidden">
+          <img src="/assets/chess.png" alt="" class="w-[24px] h-[24px]">
+          <img src="/assets/logo.png" alt="">
+          <div class="flex gap-2 justify-center items-center relative">
+            <img src="./assets/car.png" alt="" class="size-[25px]">
+            <div class="flex justify-center items-center bg-[#005CFF] absolute z-10 right-[-10px] top-[-7px] rounded-full size-[21px]">
+              <p class="text-center text-xs text-white">2</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Linha principal do desktop -->
+         <div class="flex justify-between my-[17px]">
+        
+          <div class="flex justify-between items-center gap-10">
+            <div class="flex justify-between">
+              <img src="/assets/logo.png" alt="Logo Avanti" class="h-[40px]">
+            </div>
+            <div class="flex justify-between">
+              <div class="flex w-full h-[40px] border rounded-[10px] items-center">
+                <input class="w-full px-4 outline-none" type="text" placeholder="Digite aqui o que você procura">
+                <button class="px-4">
+                  <img src="./assets/search.png" alt="" class="size-[18.5px]">
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex items-center">
+            <div>
+              <img src="./assets/Frame.svg" alt="">
+           </div>
+            <div>
+              <p>Ola</p>
+              <p>Nome Cliente</p>
+            </div>
+          <div class="flex gap-2 items-center relative">
+            <img src="./assets/car.png" alt="" class="size-[25px]">
+            <div class="flex justify-center items-center bg-[#005CFF] absolute z-10 right-[-10px] top-[-7px] rounded-full size-[21px]">
+              <p class="text-center text-xs text-white">2</p>
+            </div>
+          </div>
+        </div>
+
+        </div> 
+      
+    
+        <div class="hidden md:flex items-center justify-between ">
+          <!-- Esquerda: Hamburguer + Logo -->
+          <div class="flex items-center gap-4">
+            <img src="/assets/chess.png" alt="Menu" class="w-[24px] h-[24px]">
+          </div>
+          <div class="flex">
+          <!-- Direita: Departamentos -->
+          <ul class="flex gap-6  text-sm font-semibold text-gray-800">
+            <li><a href="#">Departamento 1</a></li>
+            <li><a href="#">Departamento 2</a></li>
+            <li><a href="#">Departamento 3</a></li>
+            <li><a href="#">Departamento 4</a></li>
+            <li><a href="#">Departamento 5</a></li>
+            <li><a href="#">Departamento 6</a></li>
+            <li><a href="#">Departamento 7</a></li>
+            <li><a href="#">Departamento 8</a></li>
+          </ul>
+          </div>
+        </div>
+      </header>
+      
+    
+      <!--Banner-->
+    <div class=" hidden md:flex mt-[18px] w-full justify-center bg-[#E7E7EA]" >
+      <img src="./assets/image-alta.png" alt="">
+      <div class="flex items-center">
+        <img src="./assets/supersale.png" alt="" class="">
+      </div>
     </div>
-  </header>
+    <div class="md:hidden" >
+      <img src="./assets/folder1.png" alt="" >
+    </div>
 
-  <main class="container mx-auto">
-    <!-- Hero Banner -->
-    <section class="mt-4 px-4">
-      <img src="./assets/folder1.png" alt="Promoção especial" class="w-full rounded-lg">
-    </section>
+    <div class="container mx-auto">
+      <div class="hidden md:flex flex-col justify-between">
+        <div class="flex justify-between">
+          <h2 class="font-bold text-[16px]">Lançamentos</h2>
+          <a href="teste" class="font-bold text-[14px] underline cursor-pointer">Ver mais</a>
+        </div>
+        <div class="flex justify-between">
+            <img src="./assets/roupasG.png" alt="">
+            <img src="./assets/roupasG.png" alt="">
+            <img src="./assets/roupasG.png" alt="">
+            <img src="./assets/roupasG.png" alt="">
+            <img src="./assets/roupasG.png" alt="">
+        </div> 
+        <div class="flex justify-center items-center mt-2 ">
+          <span class="size-[7px] bg-gray-600 rounded-full"></span>
+          <span class="size-[7px]  bg-gray-300 rounded-full mx-1.5"></span>
+          <span class="size-[7px] bg-gray-300 rounded-full"></span>
+      </div>
+      <div class="hidden md:flex items-center mx-[31.2px] mt-24 gap-[37.5px]">
+        <div class="bg-[#C2C2C2] flex justify-center items-center min-w-[652px]">
+          <img src="./assets/desktop/cup2.png" alt="" class="">
+        </div>
+        <div class="flex flex-col">
+          <h3 class="font-bold text-2xl mb-[18px]">Lorem IPSUM</h3>
+          <div class="flex flex-col font-[400px] text-[18px]  tracking-4 w-[487px]">
+            <p >Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.                  </p>
+            <br>
+            <p>Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.                  </p>
+          </div>
+        </div>  
+        </div>
+      </div>
 
-    <!-- New Arrivals -->
-    <section class="mt-8 px-4">
-      <div class="flex justify-between items-center mb-4">
-        <h2 class="font-bold text-lg md:text-xl">Lançamentos</h2>
-        <a href="#" class="text-sm font-bold underline hover:text-primary transition">Ver mais</a>
+    </div>
+    <div class="hidden md:flex justify-center items-center  w-full bg-[#DEDEDE] my-[46px]">
+        <div class="flex flex-col gap-[49px] ">
+          <h3 class="font-bold text-[30px]  text-center">Lorem IPSUM</h3>
+          <div class=" flex my-[21px] w-[470px] items-start justify-start ">
+            <img src="./assets/Circulo e Icone.svg" alt="" class="h-[60px] w-[60px]">
+            <p class="ml-3.5 text-[18px] font-normal">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+          </div>
+          <div class=" flex my-[21px] w-[470px] items-center justify-center ">
+            <img src="./assets/Circulo e Icone.svg" alt="" class="h-[60px] w-[60px]">
+            <p class="ml-3.5 text-[18px] font-normal">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+          </div>
+          <div class=" flex my-[21px] w-[470px] items-center justify-center ">
+            <img src="./assets/Circulo e Icone.svg" alt="" class="h-[60px] w-[60px]">
+            <p class="ml-3.5 text-[18px] font-normal">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+          </div>
+        </div>
+      <div class="flex my-9 ml-[49px]">
+        <img src="./assets/desktop/cup3.png" alt="">
       </div>
       
-      <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-        <article class="product-card">
-          <img src="./assets/roupa.png" alt="Produto novo 1" class="w-full rounded-lg hover:opacity-90 transition">
-          <h3 class="mt-2 text-sm font-semibold">Nome do Produto</h3>
-          <p class="text-xs text-gray-600">R$ 99,90</p>
-        </article>
-        <article class="product-card">
-          <img src="./assets/roupa.png" alt="Produto novo 2" class="w-full rounded-lg hover:opacity-90 transition">
-          <h3 class="mt-2 text-sm font-semibold">Nome do Produto</h3>
-          <p class="text-xs text-gray-600">R$ 99,90</p>
-        </article>
-      </div> 
+    </div>
+    <div class="hidden md: container mx-auto">
+      <div class="flex items-center mx-[31.2px] mt-24 gap-[37.5px]">
+        <div class="bg-[#C2C2C2] flex justify-center items-center min-w-[652px]">
+          <img src="./assets/desktop/cup2.png" alt="" class="">
+        </div>
+        <div class="flex flex-col">
+          <h3 class="font-bold text-2xl mb-[18px]">Lorem IPSUM</h3>
+          <div class="flex flex-col font-[400px] text-[18px]  tracking-4 w-[487px]">
+            <p >Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.                  </p>
+            <br>
+            <p>Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.                  </p>
+          </div>
+        </div>  
+        </div>
+        <div class="hidden md:flex flex-col justify-between">
+            <div class="flex justify-between">
+              <h2 class="font-bold text-[16px]">Lançamentos</h2>
+              <a href="teste" class="font-bold text-[14px] underline cursor-pointer">Ver mais</a>
+            </div>
+            <div class="flex justify-between">
+                <img src="./assets/roupasG.png" alt="">
+                <img src="./assets/roupasG.png" alt="">
+                <img src="./assets/roupasG.png" alt="">
+                <img src="./assets/roupasG.png" alt="">
+                <img src="./assets/roupasG.png" alt="">
+            </div> 
+            <div class="flex justify-center items-center mt-2 ">
+              <span class="size-[7px] bg-gray-600 rounded-full"></span>
+              <span class="size-[7px]  bg-gray-300 rounded-full mx-1.5"></span>
+              <span class="size-[7px] bg-gray-300 rounded-full"></span>
+          </div>
+        </div>
+      </div>
+      <!-- imagem da regiao -->
+      <div class=" hidden md:flex justify-center items-center w-full">
+        <div class="w-full flex items-center justify-center">
+          <img src="./assets/desktop/fundo1.png" alt="" class="w-full">
+          <div class="w-full font-normal text-[30px] bg-[#005CFF] flex justify-center items-center text-center absolute h-[132px]">
+            <p class="text-white">Entre em contato conosco e verifique a disponibilidade para sua região!</p>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:flex flex-col container mx-auto my-10 ">
+        <div class="flex text-center justify-center items-center ">
+          <h3>Cadastra-se na nossa newsletter</h3>
+        </div>
+          <div class="flex bg-[#F5F5F5] w-full rounded-2xl justify-center items-center h-[176px]">
+            <div class=" flex">
+              <form action=""  class="flex mx-4  w-full mt-9 gap-6" >
+                <div class=" flex bg-white mb-4 h-12 rounded-lg">
+                  <input type="text" name="Nome" id="Nome" placeholder="Digite seu nome" class="flex w-[280px] mx-5 outline-none">
+                </div>
+                <div class=" flex bg-white h-12 rounded-lg">
+                  <input type="text" name="email" id="email" placeholder="Digite seu e-mail" class="flex w-[280px] mx-5 outline-none">
+                </div>
+                <div class="flex my-6 justify-center ">
+                  <input type="checkbox" >
+                  <p class="w-full ml-4 text-[12px] font-bold">Estou de acordo com a Política de Privacidade</p>
+                </div>
+                <div class="flex justify-center w-[121px] h-12 bg-[#005CFF] rounded-lg cursor-pointer text-white mb-6">
+                  <button >Cadastrar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+      <!-- <footer> -->
+    
+    <div class="hidden md:flex flex-col items-center w-full bg-[#F5F5F5] h-[386px]">
+      <div class="flex container mx-auto justify-between items-top mt-16">
+        <div class="flex flex-col">
+          <div class="flex">
+            <img src="/assets/avanti2.svg" alt="">
+          </div>
+          <div class="flex justify-between my-[67px] w-[194px] ">
+            <ul class="flex gap-10">
+              <li >
+                <img src="./assets/instagram.svg" alt="">
+               </li>
+               <li>
+                 <img src="./assets/facebook.svg" alt="">
+                </li>
+                <li>
+                 <img src="./assets/youtube-logo.svg" alt="">
+                </li>
+                <li>
+                 <img src="./assets/logo-tiktok-svgrepo-com.svg" alt="">
+                </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="flex flex-col items-center   ">
+          <div >
+            <h4 class="font-bold text-[12px]">teste</h4>
+            <div class="font-normal text-[12px]">
+              <h5 class="py-1.5">Sobre Nós</h5>
+              <h5>Nossas Lojas</h5>
+              <h5>Privacidade</h5>
+              <h5>Termos e Condições</h5>
+            </div>
+          </div>
+        </div>
+        <div class="flex">
+          <div>
+            <h4 class="font-bold text-[12px]">Central de ajuda</h4>
+            <div class="font-normal text-[12px]">
+              <h5>Sobre Nós</h5>
+              <h5>Nossas Lojas</h5>
+              <h5>Privacidade</h5>
+              <h5>Termos e Condições</h5>
+            </div>
+          </div>
+        </div>
+        <div class="flex">
+            <div>
+              <h4 class="font-bold text-[12px]">Atendimento</h4>
+              <div class="font-normal text-[12px]">
+              <h5>Telefone: (00) 1234-5678</h5>
+              <h5>E-mail: exemplo@exemplo.com.br</h5>
+              <h5>Horário de atendimento:</h5>
+              <h5>Segunda a Sábado: 07h00 às 23h00</h5>
+              <h5>Domingos e Feriados:  07h00 às 21h00</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- Cartões -->
+        <div class="flex">
+          <ul class="flex gap-9">
+            <li><img src="./assets/pagamentos/amex.svg" alt=""></li>
+            <li><img src="./assets/pagamentos/União 32.svg" alt=""></li>
+            <li><img src="./assets/pagamentos/visa.svg" alt=""></li>
+            <li><img src="./assets/pagamentos/Caminho 19362.svg" alt=""></li>
+            <li><img src="./assets/pagamentos/elo.svg" alt=""></li>
+            <li><img src="./assets/pagamentos/b.svg" alt=""></li>
+            <li><img src="./assets/pagamentos/paypal-seeklogo.com.svg" alt=""></li>
+            <li><img src="./assets/pagamentos/União 332.svg" alt=""></li>
+            <li><img src="./assets/pagamentos/icon-boleto___ffe2ba684569d29f8e546b10457c48f8.svg" alt=""></li>
+          </ul>
+      </div>
       
-      <div class="my-4 flex justify-center items-center">
-        <span class="w-2 h-2 bg-gray-600 rounded-full mx-1"></span>
-        <span class="w-2 h-2 bg-gray-300 rounded-full mx-1"></span>
-        <span class="w-2 h-2 bg-gray-300 rounded-full mx-1"></span>
+    </div>
+    <footer class="hidden md:flex flex-col justify-center items-center text-center container mx-auto">
+      <div class="my-10">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
       </div>
-    </section>
-
-    <!-- Content Section 1 -->
-    <section class="mt-8 md:mt-12">
-      <div class="w-full">
-        <img src="./assets/cup.png" alt="Conteúdo promocional" class="w-full">
-      </div>
-      <div class="px-6 mt-6 mb-8 md:mb-12 md:px-12">
-        <h3 class="font-bold text-2xl mb-4 md:text-3xl">Lorem IPSUM</h3>
-        <div class="text-sm leading-relaxed">
-          <p class="mb-4">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim</p>
-          <p>Cras dignissim est et pellentesque tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue placerat et.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="bg-mediumGray py-8 md:py-12">
-      <div class="flex justify-center">
-        <img src="./assets/cup2.png" alt="Recursos" class="max-w-xs md:max-w-md">
-      </div>
-      <div class="text-center my-5">
-        <h3 class="font-bold text-xl md:text-2xl">LOREM IPSUM</h3>
-      </div>
-      <div class="px-6 md:px-12">
-        <div class="flex flex-col items-center my-6 md:flex-row md:items-start">
-          <img src="./assets/Circulo e Icone.svg" alt="Ícone" class="w-12 h-12 mb-3 md:mb-0 md:mr-4">
-          <p class="text-xs text-center md:text-left md:text-sm">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        </div>
-        <div class="flex flex-col items-center my-6 md:flex-row md:items-start">
-          <img src="./assets/Circulo e Icone.svg" alt="Ícone" class="w-12 h-12 mb-3 md:mb-0 md:mr-4">
-          <p class="text-xs text-center md:text-left md:text-sm">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        </div>
-        <div class="flex flex-col items-center my-6 md:flex-row md:items-start">
-          <img src="./assets/Circulo e Icone.svg" alt="Ícone" class="w-12 h-12 mb-3 md:mb-0 md:mr-4">
-          <p class="text-xs text-center md:text-left md:text-sm">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Content Section 2 -->
-    <section class="mt-8 md:mt-12">
-      <div>
-        <img src="./assets/cup3.png" alt="Mais conteúdo" class="w-full">
-      </div>
-      <div class="px-6 mt-6 md:px-12">
-        <h3 class="font-bold text-2xl mb-4 md:text-3xl">LOREM IPSUM</h3>
-        <div class="text-sm leading-relaxed">
-          <p class="mb-4">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim</p>
-          <p>Cras dignissim est et pellentesque tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue placerat et.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Banner -->
-    <section class="relative my-8 md:my-12">
-      <img src="./assets/quarto-banner.png" alt="Entre em contato" class="w-full">
-      <div class="absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 py-3 px-4">
-        <p class="text-white text-center text-sm md:text-base font-semibold">Entre em contato conosco e verifique a disponibilidade para sua região!</p>
-      </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="px-4 md:px-0">
-      <h3 class="text-center text-lg font-bold md:text-xl">Cadastre-se na nossa newsletter</h3>
-      <div class="bg-lightGray rounded-xl mt-4 p-6 md:p-8">
-        <form class="w-full">
-          <div class="bg-white rounded-lg mb-4 h-12 flex items-center">
-            <input type="text" name="name" id="name" placeholder="Digite seu nome" 
-              class="w-full px-4 outline-none text-sm">
-          </div>
-          <div class="bg-white rounded-lg h-12 flex items-center">
-            <input type="email" name="email" id="email" placeholder="Digite seu e-mail" 
-              class="w-full px-4 outline-none text-sm">
-          </div>
-          <div class="flex items-center my-6">
-            <input type="checkbox" id="privacy" class="w-4 h-4 mr-3">
-            <label for="privacy" class="text-xs font-bold">Estou de acordo com a Política de Privacidade</label>
-          </div>
-          <button type="submit" class="w-full bg-primary rounded-lg h-12 text-white font-semibold hover:bg-opacity-90 transition">
-            Cadastrar
-          </button>
-        </form>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-lightGray mt-10">
-      <div class="flex justify-center py-10">
-        <img src="./assets/avanti2.svg" alt="Avanti" class="h-8">
-      </div>
-      
-      <div class="flex justify-center pb-10">
-        <ul class="flex gap-8">
-          <li>
-            <a href="#" aria-label="Instagram">
-              <img src="./assets/instagram.svg" alt="Instagram" class="h-6">
-            </a>
-          </li>
-          <li>
-            <a href="#" aria-label="Facebook">
-              <img src="./assets/facebook.svg" alt="Facebook" class="h-6">
-            </a>
-          </li>
-          <li>
-            <a href="#" aria-label="YouTube">
-              <img src="./assets/youtube-logo.svg" alt="YouTube" class="h-6">
-            </a>
-          </li>
-          <li>
-            <a href="#" aria-label="TikTok">
-              <img src="./assets/logo-tiktok-svgrepo-com.svg" alt="TikTok" class="h-6">
-            </a>
-          </li>
+      <div class="mb-10">
+        <ul class="flex justify-between items-center gap-10"> 
+          <li><img src="./assets/footer/Group.svg" alt=""></li>
+          <li><img src="./assets/footer/vtex-pci-200.svg" alt=""></li>
+          <li>|</li>
+          <li><img src="./assets/footer/Frame 14.svg" alt=""></li>
+          <li><img src="./assets/footer/VTEX_Logo (1) 1.svg" alt=""></li>
         </ul>
       </div>
-      
-      <div class="border-t border-gray-300">
-        <div class="py-4 px-4 flex justify-between items-center">
-          <h5 class="font-semibold">Institucional</h5>
-          <img src="./assets/iconmonstr-arrow-25.svg" alt="" class="w-4 transform transition-transform duration-300">
-        </div>
-        <div class="border-t border-gray-300 py-4 px-4 flex justify-between items-center">
-          <h5 class="font-semibold">Central de ajuda</h5>
-          <img src="./assets/iconmonstr-arrow-25.svg" alt="" class="w-4 transform transition-transform duration-300">
-        </div>
-        <div class="border-t border-b border-gray-300 py-4 px-4 flex justify-between items-center">
-          <h5 class="font-semibold">Atendimento</h5>
-          <img src="./assets/iconmonstr-arrow-25.svg" alt="" class="w-4 transform transition-transform duration-300">
-        </div>
-      </div>
-      
-      <div class="py-8">
-        <div class="flex justify-center gap-6 flex-wrap px-4">
-          <img src="./assets/pagamentos/amex.svg" alt="American Express" class="h-6">
-          <img src="./assets/pagamentos/União 32.svg" alt="Mastercard" class="h-6">
-          <img src="./assets/pagamentos/visa.svg" alt="Visa" class="h-6">
-          <img src="./assets/pagamentos/Caminho 19362.svg" alt="Hipercard" class="h-6">
-          <img src="./assets/pagamentos/elo.svg" alt="Elo" class="h-6">
-        </div>
-        <div class="flex justify-center gap-6 flex-wrap mt-4 px-4">
-          <img src="./assets/pagamentos/b.svg" alt="Boleto" class="h-6">
-          <img src="./assets/pagamentos/paypal-seeklogo.com.svg" alt="PayPal" class="h-6">
-          <img src="./assets/pagamentos/União 332.svg" alt="Pix" class="h-6">
-          <img src="./assets/pagamentos/icon-boleto___ffe2ba684569d29f8e546b10457c48f8.svg" alt="Outro" class="h-6">
-        </div>
-      </div>
-      
-      <div class="px-4 py-6 text-center">
-        <p class="text-xs text-gray-600">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.
-        </p>
-      </div>
-      
-      <div class="flex justify-center pb-8">
-        <div class="flex flex-wrap items-center justify-center gap-4 md:gap-8">
-          <img src="./assets/footer/Group.svg" alt="Certificado" class="h-8">
-          <img src="./assets/footer/vtex-pci-200.svg" alt="PCI" class="h-8">
-          <span class="hidden md:block text-gray-400">|</span>
-          <img src="./assets/footer/Frame 14.svg" alt="Segurança" class="h-8">
-          <img src="./assets/footer/VTEX_Logo (1) 1.svg" alt="VTEX" class="h-8">
-        </div>
-      </div>
     </footer>
+
+    
+
+   <!--Mobile-->
+    <div class="md:hidden container  ">
+      <!--links de roupas-->
+        <div class="md:hidden flex flex-col justify-between w-[358px] mx-4 my-14">
+          <div class="flex justify-between h-[22px] mb-4">
+            <h2 class="font-bold text-[16px]">Lançamentos</h2>
+            <a href="teste" class="font-bold text-[14px] underline cursor-pointer">Ver mais</a>
+          </div>
+          <div class="flex justify-between">
+            <img src="./assets/roupa.png" alt="">
+            <img src="./assets/roupa.png" alt="">
+          </div> 
+          <div class="flex justify-center items-center my-4">
+              <span class="size-[7px] bg-gray-600 rounded-full"></span>
+              <span class="size-[7px]  bg-gray-300 rounded-full mx-1.5"></span>
+              <span class="size-[7px] bg-gray-300 rounded-full"></span>
+          </div>
+        </div>
+        
+        
+        <div class="flex flex-col w-[391px]">
+          <div class=" w-full">
+            <img src="./assets/cup.png" alt="">
+          </div>
+          <div class="flex flex-col mx-6 mt-9 mb-[59px]">
+            <h3 class="font-bold text-2xl mb-[18px]">Lorem IPSUM</h3>
+            <div class="font-[400px] text-[14px]  tracking-4">
+              <p >Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim</p>
+              <br>
+              <p>Cras dignissim est et pellentesque tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue placerat et.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#DEDEDE] flex flex-col">
+          <div class="flex justify-center items-center mx-[22px] mt-7">
+            <img src="./assets/cup2.png" alt="">
+          </div>
+          <div class="flex items-center justify-center my-5">
+            <h3>LOREM IPSUM</h3>
+          </div>
+          <div class="flex flex-col my-[21] mx-[21px] justify-center items-center mb-3.5  ">
+            <div class=" flex my-[21px] items-center justify-center">
+              <img src="./assets/Circulo e Icone.svg" alt="" class="h-[60px] w-[60px]">
+              <p class="ml-3.5 text-[12px] font-normal">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+            </div>
+            <div class=" flex my-[21px] items-center justify-center ">
+              <img src="./assets/Circulo e Icone.svg" alt="" class="h-[60px] w-[60px]">
+              <p class="ml-3.5 text-[12px] font-normal">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+            </div>
+            <div class="flex my-[21px] items-center justify-center">
+              <img src="./assets/Circulo e Icone.svg" alt="" class="h-[60px] w-[60px]">
+              <p class="ml-3.5 text-[12px] font-normal">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+            </div>
+          </div>
+        </div>
+        <div class="my-14">
+          <div>
+            <img src="./assets/cup3.png" alt="">
+          </div>
+          <div class="flex flex-col mx-6 mt-[38px]">
+            <div class="flex justify-start mb-[18px]">
+              <h3 class="font-bold text-2xl">LOREM IPSUM</h3>
+            </div>
+            <div class=" font-normal text-[14px]">
+              <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim</p>
+              <br>
+              <p>Cras dignissim est et pellentesque tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue placerat et.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center mb-[56px]">
+          <img src="./assets/quarto-banner.png" alt="" >
+          <div class="w-[390px] font-semibold text-[16px] bg-[#005CFF] flex text-center absolute">
+            <p class="text-white">Entre em contato conosco e verifique a disponibilidade para sua região!</p>
+          </div>
+        </div>
+        <div class="flex flex-col text-center ">
+          <h3>Cadastra-se na nossa newsletter</h3>
+        </div>
+          <div class="bg-[#F5F5F5] mx-4 mt-4 rounded-2xl justify-center items-center">
+            <div class=" flex  ">
+              <form action=""  class="mx-4  w-full mt-9" >
+                <div class=" flex bg-white mb-4 h-12 rounded-lg">
+                  <input type="text" name="Nome" id="Nome" placeholder="Digite seu nome" class="flex w-full mx-5 outline-none">
+                </div>
+                <div class=" flex bg-white h-12 rounded-lg">
+                  <input type="text" name="email" id="email" placeholder="Digite seu e-mail" class="flex w-full mx-5 outline-none">
+                </div>
+                <div class="flex my-6 justify-center ">
+                  <input type="checkbox" >
+                  <p class="w-full ml-4 text-[12px] font-bold">Estou de acordo com a Política de Privacidade</p>
+                </div>
+                <div class="flex justify-center w-[326px] h-12 bg-[#005CFF] rounded-lg cursor-pointer text-white mb-6">
+                  <button >Cadastrar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="bg-[#F5F5F5] mt-10 ">
+            <div class="flex justify-center items-center ">
+              <img src="./assets/avanti2.svg" alt="" class="my-10">
+            </div>
+            <div class="flex justify-center items-center mx-24 mb-10 "> 
+              <ul class="flex gap-10 ">
+                <li>
+                 <img src="./assets/instagram.svg" alt="">
+                </li>
+                <li>
+                  <img src="./assets/facebook.svg" alt="">
+                 </li>
+                 <li>
+                  <img src="./assets/youtube-logo.svg" alt="">
+                 </li>
+                 <li>
+                  <img src="./assets/logo-tiktok-svgrepo-com.svg" alt="">
+                 </li>
+              </ul>
+            </div>
+            <div class="flex flex-col">
+              <div class="border-t-2 border-gray-950">
+                <div class="my-4 mx-4 flex justify-between">
+                <h5>Institucional</h5>
+                <img src="./assets/iconmonstr-arrow-25.svg" alt="">
+                </div>
+              </div>
+              <div class="border-t-2 border-gray-950">
+                <div class="my-4 mx-4 flex justify-between">
+                <h5>Central de ajuda</h5>
+                <img src="./assets/iconmonstr-arrow-25.svg" alt="">
+                </div>
+              </div>
+              <div class="border-t-2 border-b-2 border-gray-950">
+                <div class="my-4 mx-4 flex justify-between">
+                <h5>Atendimento</h5>
+                <img src="./assets/iconmonstr-arrow-25.svg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center flex-col mt-12  ">
+              <ul class="flex gap-9">
+                <li><img src="./assets/pagamentos/amex.svg" alt=""></li>
+                <li><img src="./assets/pagamentos/União 32.svg" alt=""></li>
+                <li><img src="./assets/pagamentos/visa.svg" alt=""></li>
+                <li><img src="./assets/pagamentos/Caminho 19362.svg" alt=""></li>
+                <li><img src="./assets/pagamentos/elo.svg" alt=""></li>
+              </ul>
+              <br>
+              <ul class="flex gap-9 mb-10">
+                <li><img src="./assets/pagamentos/b.svg" alt=""></li>
+                <li><img src="./assets/pagamentos/paypal-seeklogo.com.svg" alt=""></li>
+                <li><img src="./assets/pagamentos/União 332.svg" alt=""></li>
+                <li><img src="./assets/pagamentos/icon-boleto___ffe2ba684569d29f8e546b10457c48f8.svg" alt=""></li>
+              </ul>
+            </div>
+          </div>
+          <footer class="flex flex-col">
+            <div class="flex my-10 justify-center text-center mx-4">
+              <p class="font-normal text-[12px]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
+            </div>
+            <div class="flex justify-center mx-12 ">
+              <ul class="flex justify-between items-center gap-10"> 
+                <li><img src="./assets/footer/Group.svg" alt=""></li>
+                <li><img src="./assets/footer/vtex-pci-200.svg" alt=""></li>
+                <li>|</li>
+                <li><img src="./assets/footer/Frame 14.svg" alt=""></li>
+                <li><img src="./assets/footer/VTEX_Logo (1) 1.svg" alt=""></li>
+              </ul>
+            </div>
+          </footer>
+    </div>
   </main>
+            
 </body>
-</html>
+</html> 
