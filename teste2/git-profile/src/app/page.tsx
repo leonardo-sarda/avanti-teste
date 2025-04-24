@@ -3,13 +3,58 @@ import { User } from "@/components/user";
 import { UserNotFound } from "@/components/user-not-found";
 import { Search, Target } from "lucide-react";
 import Image from "next/image";
-import {  useEffect, useState } from "react";
+import {  FormEvent, useState } from "react";
 import gitname from "../assets/gitname.svg";
 import logo from "../assets/logo.svg";
 
+type UserProps = {
+	name: string;
+	bio: string;
+	avatar_url: string;
+};
+
+type UserResponse = {
+	name: string;
+	bio: string;
+	avatar_url: string 
+};
+
+
+
+
 export default function Home() {
+	
 	const [userName, setUserName] = useState("");
-	const [searchUser, setSearchUser] = useState("");
+	 const [userData, setUserData] = useState<UserProps | null>(null);
+	 const [hasSearched, setHasSearched] = useState(false)
+	
+
+	  async function getUserGit(e: FormEvent<HTMLFormElement>){
+			e.preventDefault()
+			
+			if(!userName) return alert('Campo Obrigatório')
+			try{
+				const response = await fetch(`https://api.github.com/users/${userName}`);
+	
+				if(response.status === 404 ){
+					setUserData(null)
+					return
+				}
+				const data = await response.json();
+				setUserData(data)
+
+				}catch{
+					setUserData(null)
+				}
+				finally{
+					setHasSearched(true)
+				}
+			
+		}
+		
+		
+	
+	
 
 	return (
 		<main className="container mx-auto ">
@@ -22,10 +67,9 @@ export default function Home() {
 
 				<form
 					className="mt-[27] mb-[33]"
-					onSubmit={(e) => {
-						e.preventDefault();
-						setSearchUser(userName);
-					}}
+					onSubmit={(e) =>
+						getUserGit(e)
+					}
 				>
 					<div className="bg-white flex flex-row w-[503px] h-[62px] justify-between items-center rounded-[10px]">
 						<input
@@ -46,7 +90,8 @@ export default function Home() {
 					</div>
 				</form>
 				
-				{searchUser ? <User username={searchUser} /> : <UserNotFound/>}
+				{/* {userData && hasSearched ? <User user={userData} /> : <UserNotFound/>} */}
+				{userData ? (<User user={userData}/>): hasSearched ? (<UserNotFound/>): null}
 			</div>
 		</main>
 	);
