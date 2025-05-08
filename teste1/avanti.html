@@ -6,9 +6,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="font.css" />
   <title>LP avanti</title>
 </head>
-<body class="font-[Nunito Sans]">
+<body class="font-nunito">
   <main class="w-screen h-screen">
       <!-- Faixa do cupom (mobile + desktop) -->
       <section class="bg-[#005CFF] flex justify-center text-center px-2 py-1">
@@ -34,13 +35,13 @@
         <!-- Linha principal do desktop -->
          <div class="flex justify-between my-[17px]">
         
-          <div class="flex justify-between items-center gap-10">
-            <div class="flex justify-between">
+          <div class="flex justify-between gap-20">
+            <div class="flex ">
               <img src="/assets/logo.png" alt="Logo Avanti" class="h-[40px]">
             </div>
-            <div class="flex justify-between">
-              <div class="flex w-full h-[40px] border rounded-[10px] items-center">
-                <input class="w-full px-4 outline-none" type="text" placeholder="Digite aqui o que você procura">
+            <div class="flex">
+              <div class="flex w-[594px] h-[40px] border rounded-[10px] items-center">
+                <input class="w-[594px] px-4 outline-none" type="text" placeholder="Digite aqui o que você procura">
                 <button class="px-4">
                   <img src="./assets/search.png" alt="" class="size-[18.5px]">
                 </button>
@@ -48,11 +49,11 @@
             </div>
           </div>
           
-          <div class="flex items-center">
-            <div>
-              <img src="./assets/Frame.svg" alt="">
+          <div class="flex items-center h-[28px]">
+            <div class="flex justify-center items-center mr-1 w-auto h-auto" >
+              <img src="./assets/Frame.svg" alt="" >
            </div>
-            <div>
+            <div class="flex flex-col justify-center font-semibold text-sm mr-6">
               <p>Ola</p>
               <p>Nome Cliente</p>
             </div>
@@ -67,22 +68,23 @@
         </div> 
       
     
-        <div class="hidden md:flex items-center justify-between ">
+        <div class="hidden md:flex items-center justify-center   ">
           <!-- Esquerda: Hamburguer + Logo -->
-          <div class="flex items-center gap-4">
-            <img src="/assets/chess.png" alt="Menu" class="w-[24px] h-[24px]">
+          <div class="flex items-center">
+            <img src="/assets/chess.png" alt="Menu" class="w-[24px] h-[24px] mr-1">
+            <p class="font-bold text-sm mr-11">todas as Categorias</p>
           </div>
-          <div class="flex">
+          <div class="flex ">
           <!-- Direita: Departamentos -->
-          <ul class="flex gap-6  text-sm font-semibold text-gray-800">
-            <li><a href="#">Departamento 1</a></li>
-            <li><a href="#">Departamento 2</a></li>
-            <li><a href="#">Departamento 3</a></li>
-            <li><a href="#">Departamento 4</a></li>
-            <li><a href="#">Departamento 5</a></li>
-            <li><a href="#">Departamento 6</a></li>
-            <li><a href="#">Departamento 7</a></li>
-            <li><a href="#">Departamento 8</a></li>
+          <ul class="flex text-sm font-semibold text-gray-800 gap-11">
+            <li><a href="#">Departamento </a></li>
+            <li><a href="#">Departamento </a></li>
+            <li><a href="#">Departamento </a></li>
+            <li><a href="#">Departamento </a></li>
+            <li><a href="#">Departamento </a></li>
+            <li><a href="#">Departamento </a></li>
+            <li><a href="#">Departamento </a></li>
+            <li><a href="#">Departamento </a></li>
           </ul>
           </div>
         </div>
@@ -101,12 +103,12 @@
     </div>
 
     <div class="container mx-auto">
-      <div class="hidden md:flex flex-col justify-between">
-        <div class="flex justify-between">
+      <div class="hidden md:flex flex-col justify-between  w-[1288.4px] mx-auto my-[96px]">
+        <div class="flex justify-between ">
           <h2 class="font-bold text-[16px]">Lançamentos</h2>
           <a href="teste" class="font-bold text-[14px] underline cursor-pointer">Ver mais</a>
         </div>
-        <div class="flex justify-between">
+        <div class="flex items-center justify-between ">
             <img src="./assets/roupasG.png" alt="">
             <img src="./assets/roupasG.png" alt="">
             <img src="./assets/roupasG.png" alt="">
@@ -155,8 +157,8 @@
       </div>
       
     </div>
-    <div class="hidden md: container mx-auto">
-      <div class="flex items-center mx-[31.2px] mt-24 gap-[37.5px]">
+    <div class="hidden md:flex flex-col  container mx-auto">
+      <div class="flex items-center mx-[31.2px] mt-24 gap-[37.5px] justify-center">
         <div class="bg-[#C2C2C2] flex justify-center items-center min-w-[652px]">
           <img src="./assets/desktop/cup2.png" alt="" class="">
         </div>
@@ -169,22 +171,22 @@
           </div>
         </div>  
         </div>
-        <div class="hidden md:flex flex-col justify-between">
-            <div class="flex justify-between">
-              <h2 class="font-bold text-[16px]">Lançamentos</h2>
-              <a href="teste" class="font-bold text-[14px] underline cursor-pointer">Ver mais</a>
-            </div>
-            <div class="flex justify-between">
-                <img src="./assets/roupasG.png" alt="">
-                <img src="./assets/roupasG.png" alt="">
-                <img src="./assets/roupasG.png" alt="">
-                <img src="./assets/roupasG.png" alt="">
-                <img src="./assets/roupasG.png" alt="">
-            </div> 
-            <div class="flex justify-center items-center mt-2 ">
-              <span class="size-[7px] bg-gray-600 rounded-full"></span>
-              <span class="size-[7px]  bg-gray-300 rounded-full mx-1.5"></span>
-              <span class="size-[7px] bg-gray-300 rounded-full"></span>
+        <div class="hidden md:flex flex-col justify-between  w-[1288.4px] mx-auto my-[96px]">
+          <div class="flex justify-between ">
+            <h2 class="font-bold text-[16px]">Lançamentos</h2>
+            <a href="teste" class="font-bold text-[14px] underline cursor-pointer">Ver mais</a>
+          </div>
+          <div class="flex items-center justify-between ">
+              <img src="./assets/roupasG.png" alt="">
+              <img src="./assets/roupasG.png" alt="">
+              <img src="./assets/roupasG.png" alt="">
+              <img src="./assets/roupasG.png" alt="">
+              <img src="./assets/roupasG.png" alt="">
+          </div> 
+          <div class="flex justify-center items-center mt-2 ">
+            <span class="size-[7px] bg-gray-600 rounded-full"></span>
+            <span class="size-[7px]  bg-gray-300 rounded-full mx-1.5"></span>
+            <span class="size-[7px] bg-gray-300 rounded-full"></span>
           </div>
         </div>
       </div>
